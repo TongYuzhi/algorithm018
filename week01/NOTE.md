@@ -1,9 +1,7 @@
-@[toc](第一周总结与反思)
 
-<time>week01</time>
-<content>Array, LinkedList, Skip List, Stack, Queue, Dequeue</content>
+@time: week01
+@content: Array, LinkedList, Skip List, Stack, Queue, Dequeue
 
-<context> 
 
 今天是训练营第一周的最后一天，大致总结一下我这周的生活，以反思、改进并提高。
 
