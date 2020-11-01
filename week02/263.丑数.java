@@ -1,0 +1,19 @@
+/*
+ * @lc app=leetcode.cn id=263 lang=java
+ *
+ * [263] 丑数
+ */
+
+// @lc code=start
+class Solution {
+    public boolean isUgly(int num) {
+        for (int i = 2; i < 6 && num > 0; i++) {
+            while (num % i == 0) {
+                num /= i;
+            }
+        }
+        return num == 1;
+    }
+}
+// @lc code=end
+
