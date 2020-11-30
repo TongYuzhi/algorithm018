@@ -26,8 +26,8 @@ class Solution {
         }
         int[] bucket = new int[26];
 
-        for (char ch : tasks) {
-            bucket[ch - 'A']++;
+        for (char c : tasks) {
+            bucket[c - 'A']++;
         }
         Arrays.sort(bucket);
 
@@ -39,9 +39,7 @@ class Solution {
                 if (bucket[25] == 0) {
                     break;
                 }
-                if (i < 26 && bucket[25 - i] > 0) {
-                    bucket[25 - i]--;
-                }
+                if (i < 26 && bucket[25 - i]-- > 0) ;
                 time++;
                 i++;
             }
@@ -52,3 +50,33 @@ class Solution {
 }
 // @lc code=end
 
+/**
+ * 
+ * public int leastInterval(char[] tasks, int n) {
+        if (tasks == null || tasks.length < 1) {
+            return 0;
+        }
+        int[] bucket = new int[26];
+
+        for (char c : tasks) {
+            bucket[c - 'A']++;
+        }
+        Arrays.sort(bucket);
+
+        int time = 0;
+
+        while (bucket[25] > 0) {
+            int i = 0;
+            while (i <= n) {
+                if (bucket[25] == 0) {
+                    break;
+                }
+                if (i < 26 && bucket[25 - i]-- > 0) ;
+                time++;
+                i++;
+            }
+            Arrays.sort(bucket);
+        }
+        return time;
+    }
+ */
